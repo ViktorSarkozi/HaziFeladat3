@@ -12,6 +12,19 @@ public class StringCalculator {
         
         String[] numbersInArray = numbers.split(split);
 
+        if(numbers.contains("-")){
+            
+            String negatives="";
+            for (String number : numbersInArray) {
+                if(number.contains("-")){
+                    negatives+=number+",";
+                }
+            }
+            String exception="Negatives not allowed:"+negatives;
+            throw new RuntimeException(exception);
+        }
+        
+        
         switch (numbersInArray.length) {
             case 1: {
                 switch (numbersInArray[0]) {
