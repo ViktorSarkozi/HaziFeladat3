@@ -6,8 +6,11 @@ package viktorsarkozi.stringcalculator_savuaap;
  */
 public class StringCalculator {
 
+    public static String split=",";
+    
     private int add(String numbers) {
-        String[] numbersInArray = numbers.split(",");
+        
+        String[] numbersInArray = numbers.split(split);
 
         switch (numbersInArray.length) {
             case 1: {
